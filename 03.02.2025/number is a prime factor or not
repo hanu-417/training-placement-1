@@ -1,0 +1,10 @@
+def is_prime_factor(number, potential_factor):
+    if number <= 1 or potential_factor <= 1:
+        return False 
+    return number % potential_factor == 0
+number = 15
+potential_factor = 3
+if is_prime_factor(number, potential_factor):
+    print(potential_factor, "is a prime factor of", number)
+else:
+    print(potential_factor, "is not a prime factor of", number)
