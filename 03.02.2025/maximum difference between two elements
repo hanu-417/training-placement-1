@@ -1,0 +1,15 @@
+def max_difference(nums):
+    if len(nums) < 2:
+        return None 
+    min_element = float('inf')  
+    max_difference = float('-inf')  
+    for num in nums:
+        min_element = min(min_element, num)
+        max_difference = max(max_difference, num - min_element)
+    return max_difference
+numbers = [7, 1, 5, 3, 6, 4]
+result = max_difference(numbers)
+if result is not None:
+    print("Maximum difference between two elements in the list:", result)
+else:
+    print("The list has less than two elements.")
